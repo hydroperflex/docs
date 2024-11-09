@@ -38,7 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install mdbook CLI
-        run: cargo install mdbook --version ~0.4
+        run: cargo install mdbook --version ~0.4.42
       - name: Build book
         run: mdbook build
       - name: Git commit report
