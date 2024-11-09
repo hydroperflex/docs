@@ -85,6 +85,10 @@ path = "build.as"
 include = true
 ```
 
+### Build dependencies
+
+Build dependencies are specified in the `[build-dependencies]` section.
+
 ## JavaScript
 
 The Whack manifest may specify multiple `[[javascript]]` sections linking a JavaScript file to be loaded right before the ActionScript environment. The `import-declaration` field must provide highly specific aliases to prevent name conflict.
