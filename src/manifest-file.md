@@ -80,7 +80,7 @@ members = [
 The Whack manifest may link a script that runs before the sources of a Whack package are compiled.
 
 ```toml
-[[build-script.source]]
+[[build-source]]
 path = "build.as"
 include = true
 ```
@@ -88,6 +88,8 @@ include = true
 ## JavaScript
 
 The Whack manifest may specify multiple `[[javascript]]` sections linking a JavaScript file to be loaded right before the ActionScript environment. The `import-declaration` field must provide highly specific aliases to prevent name conflict.
+
+> Note that the JavaScript filename must be very specific to prevent a name conflict.
 
 ```toml
 [[javascript]]
