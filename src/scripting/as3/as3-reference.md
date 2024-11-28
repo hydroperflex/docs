@@ -106,3 +106,26 @@ number of Priority.HIGH: 1
 string of Priority.LOW: low
 string of Priority.HIGH: high
 ```
+
+The following program demonstrates using `RecordLike` classes to initialise a class using an object initialiser:
+
+```
+package
+{
+    [RecordLike]
+    public class AcquisitionOptions
+    {
+        public var color:String;
+
+        public var size:ClothSize;
+    }
+}
+
+var o1:AcquisitionOptions = {
+    color: "green"
+};
+
+var o2:Object = AcquisitionOptions({
+    size: "P",
+});
+```
