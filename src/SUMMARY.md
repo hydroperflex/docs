@@ -10,6 +10,7 @@
   - [ActionScript 3](scripting/as3.md)
     - [ActionScript reference](scripting/as3/as3-reference.md)
       - [Types](scripting/as3/as3-reference/types.md)
+      - [Configuration constants](scripting/as3/as3-reference/config-constants.md)
     - [ActionScript cheatsheet](scripting/as3/as3-cheatsheet.md)
     - [Inserting JavaScript](scripting/as3/inserting-javascript.md)
   - [MXML](scripting/mxml.md)
