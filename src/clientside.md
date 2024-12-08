@@ -1,1 +1,1 @@
-# Client side
+# Client-side projects

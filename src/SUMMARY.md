@@ -1,9 +1,9 @@
 # Summary
 
 - [Introduction](introduction.md)
-- [Command line](command-line.md)
-- [Manifest file](manifest-file.md)
-- [Client side](clientside.md)
+- [Whack command line](command-line.md)
+- [Whack manifest file](manifest-file.md)
+- [Client-side projects](clientside.md)
   - [Getting started](clientside/getting-started.md)
   - [Adding a script](clientside/adding-a-script.md)
 - [Scripting](scripting.md)
@@ -12,7 +12,7 @@
       - [Types](scripting/as3/as3-reference/types.md)
       - [Configuration constants](scripting/as3/as3-reference/config-constants.md)
     - [ActionScript cheatsheet](scripting/as3/as3-cheatsheet.md)
-    - [Inserting JavaScript](scripting/as3/inserting-javascript.md)
+    - [JavaScript bridge](scripting/as3/javascript-bridge.md)
   - [MXML](scripting/mxml.md)
     - [MXML reference](scripting/mxml/mxml-reference.md)
     - [MXML cheatsheet](scripting/mxml/mxml-cheatsheet.md)
