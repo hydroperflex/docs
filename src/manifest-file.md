@@ -89,6 +89,34 @@ include = true
 
 Build dependencies are specified in the `[build-dependencies]` section.
 
+## License file
+
+Indicate the license file through the `package.license-file` field:
+
+```toml
+[package]
+license-file = "LICENSE"
+```
+
+## Including and excluding
+
+The following mutually-exclusive fields contain [.gitignore-like](https://git-scm.com/docs/gitignore) entries used for indicating which files or directories shall be uploaded when publishing:
+
+```toml
+[package]
+include = ["foo"]
+exclude = ["bar"]
+```
+
+## Metadata
+
+The `package.metadata` field consists of ignored content used by external tools.
+
+```toml
+[package.metadata.foo]
+bar = "qux"
+```
+
 ## JavaScript
 
 The Whack manifest may specify multiple `[[javascript]]` sections linking a JavaScript file to be loaded right before the ActionScript environment. The `import-declaration` field must provide highly specific aliases to prevent name conflict.
