@@ -91,6 +91,24 @@ Define configuration constants for a package through the `[define]` section:
 "CONFIG::debugging" = true
 ```
 
+## Specifying the package name
+
+The `package.name` field must be a string matching the Perl regular expression `[A-Za-z][A-Za-z0-9.\-_]*`.
+
+```toml
+[package]
+name = "com.helper.util"
+```
+
+## Specifying version
+
+The `package.version` field is assigned a full SemVer version number consisting of major, minor and patch versions.
+
+```toml
+[package]
+version = "0.1.0"
+```
+
 ## Specifying sources
 
 Specify sources to be compiled through the `package.source-paths` field:
@@ -160,6 +178,27 @@ Specify authors of a package through the `package.authors` field, using the form
 authors = ["Example <email@example.com>"]
 ```
 
+## Specifying keywords
+
+```toml
+[package]
+keywords = ["container", "utility"]
+```
+
+## Specifying categories
+
+```toml
+[package]
+categories = ["sound", "graphics"]
+```
+
+## Specifying description
+
+```toml
+[package]
+description = "Some description."
+```
+
 ## Including and excluding files
 
 The following mutually-exclusive fields contain [.gitignore-like](https://git-scm.com/docs/gitignore) entries used for indicating which files or directories shall be uploaded when publishing:
@@ -183,7 +222,7 @@ The `package.metadata` field consists of ignored content used by external tools.
 bar = "qux"
 ```
 
-## JavaScript
+## Linking JavaScript
 
 The Whack manifest may specify multiple `[[javascript]]` sections linking a JavaScript file to be loaded right before the ActionScript environment. The `import-declaration` field must provide highly specific aliases to prevent name conflict.
 
