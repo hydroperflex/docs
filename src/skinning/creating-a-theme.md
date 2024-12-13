@@ -1,11 +1,11 @@
 # Creating a theme
 
-A theme defines a cascading style sheet that may be applied to the Whack application. A theme is logical, therefore it is an AS file defining a class that extends `whack.skins.Theme`.
+A theme defines a cascading style sheet that may be applied to the Whack application. A theme is logical, therefore it is an AS file defining a class that extends `whack.themes.Theme`.
 
 ```as3
 package
 {
-    import whack.skins.*;
+    import whack.themes.*;
     public class HelloWorldTheme extends Theme
     {
     }
@@ -19,7 +19,7 @@ A theme may link a cascading style sheet file for expressing the user interface 
 ```as3
 package
 {
-    import whack.skins.*;
+    import whack.themes.*;
     [StyleSheet(source="style.css")]
     public class HelloWorldTheme extends Theme
     {

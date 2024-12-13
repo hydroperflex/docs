@@ -16,14 +16,14 @@ The JavaScript host environment is expected to be either a W3C compatible enviro
 
 The JavaScript environment is cluttered with several classes, constants, and methods from the [ActionCore](https://github.com/whackengine/actioncore) library as well as linked libraries. They are lexically available as that allows for name mangling in release builds of a Whack application.
 
-There are two special ActionScript configuration constants `RT::CLIENT` and `RT::SERVER`, which are each set to either false or true, which indicate the web browser and Node.js® platforms respectively.
+There are two special ActionScript configuration constants `RT::client` and `RT::server`, which are each set to either false or true, which indicate the web browser and Node.js® platforms respectively.
 
 ```
-// RT::CLIENT
-trace("browser:", RT::CLIENT ? "in browser" : "not in browser");
+// RT::client
+trace("browser:", RT::client ? "in browser" : "not in browser");
 
-// RT::SERVER
-trace("node", RT::SERVER ? "in node" : "not in node");
+// RT::server
+trace("node", RT::server ? "in node" : "not in node");
 ```
 
 ## Importing a JavaScript file

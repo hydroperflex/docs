@@ -1,8 +1,8 @@
 # Summary
 
 - [Introduction](introduction.md)
-- [Whack command line](command-line.md)
-- [Whack manifest file](manifest-file.md)
+- [The Whack command line interface](cli.md)
+- [The Whack manifest format](manifest-format.md)
 - [Client-side projects](clientside.md)
   - [Getting started](clientside/getting-started.md)
   - [Adding a script](clientside/adding-a-script.md)
@@ -10,7 +10,8 @@
   - [ActionScript 3](scripting/as3.md)
     - [ActionScript reference](scripting/as3/as3-reference.md)
       - [Types](scripting/as3/as3-reference/types.md)
-      - [Configuration constants](scripting/as3/as3-reference/config-constants.md)
+      - [Using configuration constants](scripting/as3/as3-reference/using-config-constants.md)
+      - [Predefined configuration constants](scripting/as3/as3-reference/predefined-config-constants.md)
     - [ActionScript cheatsheet](scripting/as3/as3-cheatsheet.md)
     - [JavaScript bridge](scripting/as3/javascript-bridge.md)
   - [MXML](scripting/mxml.md)
@@ -20,6 +21,6 @@
     - [CSS reference](scripting/css/css-reference.md)
     - [CSS cheatsheet](scripting/css/css-cheatsheet.md)
 - [ASDoc](asdoc.md)
-  - [ASDoc organisation](asdoc/asdoc-organisation.md)
+  - [ASDoc configuration](asdoc/asdoc-configuration.md)
 - [Skinning](skinning.md)
   - [Creating a theme](skinning/creating-a-theme.md)
