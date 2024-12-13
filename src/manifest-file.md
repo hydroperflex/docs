@@ -4,7 +4,7 @@ The Whack manifest is a TOML file with the name `whack.toml`, placed in the top 
 
 ## Examples
 
-### Client application
+### Client side project
 
 The Whack manifest for a client side application looks like the following:
 
@@ -18,7 +18,6 @@ path = "src"
 include = true
 
 [client-side]
-enable = true
 main-class = "example.Example"
 
 [dependencies]
@@ -43,7 +42,7 @@ include = true
 [dependencies]
 ```
 
-### Server application
+### Server side project
 
 The Whack manifest for a server side application looks like the following:
 
@@ -57,7 +56,6 @@ path = "src"
 include = true
 
 [server-side]
-enable = true
 executable-name = "example"
 
 [dependencies]
