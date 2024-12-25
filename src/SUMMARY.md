@@ -1,8 +1,8 @@
 # Summary
 
 - [Introduction](introduction.md)
-- [The Whack command line interface](cli.md)
-- [The Whack manifest format](manifest-format.md)
+- [Command line interface](cli.md)
+- [Manifest format](manifest-format.md)
 - [Client-side projects](clientside.md)
   - [Getting started](clientside/getting-started.md)
   - [Adding a script](clientside/adding-a-script.md)

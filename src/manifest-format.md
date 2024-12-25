@@ -1,4 +1,4 @@
-# The Whack manifest format
+# Manifest format
 
 The Whack manifest is a TOML file with the name `whack.toml`, placed in the top directory of a project, that describes an optional Whack workspace and a Whack package.
 
