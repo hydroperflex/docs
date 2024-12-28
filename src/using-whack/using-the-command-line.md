@@ -1,0 +1,1 @@
+The Whack command line tool allows creating, compiling and publishing local Whack projects and libraries, downloading any required dependencies as specified in the manifest file.

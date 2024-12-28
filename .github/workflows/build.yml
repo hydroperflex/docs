@@ -28,23 +28,20 @@ on:
 permissions:
   contents: write
 
-env:
-  CARGO_TERM_COLOR: always
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
-      - name: Install mdbook CLI
-        run: cargo install mdbook -f --version ~0.4.42
-      - name: Build book
-        run: mdbook build
+      - name: Install Hydroper RB tool
+        run: npm i -g com.hydroper.rb
+      - name: Build reference portal
+        run: hydroper-rb build
       - name: Git commit report
         run: |
-          mv -f book/* .
-          rm -rf book
+          mv -f out/* .
+          rm -rf out
 
           # Git commit
           git config --global user.name 'hydroperfox'
