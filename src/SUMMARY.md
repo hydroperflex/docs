@@ -1,7 +1,7 @@
 # Summary
 
 - [Introduction](introduction.md)
-- [Command line interface](cli.md)
+- [Using the command line](cli.md)
 - [Manifest format](manifest-format.md)
 - [Client-side projects](clientside.md)
   - [Getting started](clientside/getting-started.md)
