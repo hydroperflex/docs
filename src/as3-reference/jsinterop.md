@@ -8,7 +8,7 @@ The following example accesses the global `Math` object:
 trace(js_bridge.lexical("Math").random());
 ```
 
-# JavaScript supported runtime
+# Supported runtimes
 
 The JavaScript host environment is expected to be either a HTML5 engine or a Node.js® engine.
 

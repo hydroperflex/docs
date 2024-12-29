@@ -132,10 +132,6 @@
                     <path>using-configuration-constants.md</path>
                 </section>
                 <section>
-                    <title>Predefined configuration constants</title>
-                    <path>predefined-configuration-constants.md</path>
-                </section>
-                <section>
                     <title>Interoperating with JavaScript</title>
                     <path>jsinterop.md</path>
                 </section>
