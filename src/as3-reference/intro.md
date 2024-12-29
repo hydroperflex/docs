@@ -81,16 +81,25 @@ package com.company.max
 
 import com.company.max.Priority;
 
-var p:Priority = "low";
+var p:Priority?;
+
+// using string literal
+p = "low";
 p = "high";
+
+// using the property operator
 p = Priority.LOW;
 p = Priority.HIGH;
-metaInspection();
 
-function metaInspection():void
+eqv();
+
+function eqv():void
 {
+    // equivalent numbers
     trace("number of Priority.LOW:", Priority.LOW.valueOf());
     trace("number of Priority.HIGH:", Priority.HIGH.valueOf());
+
+    // equivalent strings
     trace("string of Priority.LOW:", Priority.LOW.toString());
     trace("string of Priority.HIGH:", Priority.HIGH.toString());
 }

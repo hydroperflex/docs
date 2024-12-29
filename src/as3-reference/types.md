@@ -37,29 +37,28 @@ The `Array.<T>` type, also expressed as `[T]`, is an unoptimized insertion-order
 
 The following program demonstrates using the `Array` type:
 
-```
-const list : [Number] = [10, 5];
-
+```as3
+const list:[Number] = [10, 5];
 // add a new element equivalent to first value + second value
 list.push(list[0] + list[1]);
-
 trace("length:", list.length, "third value:", list[2]);
-trace("enumerating values...");
 
+// print values
+trace("enumerating values...");
 for each (var val:Number in list)
 {
-    trace("-", val);
+    trace(" ", val);
 }
 ```
 
 The program log should be:
 
-```
+```plain
 length: 3  third value: 15
 enumerating values...
--  10
--  5
--  15
+   10
+   5
+   15
 ```
 
 # Vector type
@@ -70,17 +69,14 @@ For numbers where `T` is one of the numeric types, the `Vector` class is represe
 
 The following program demonstrates general usage of `Vector`:
 
-```
+```as3
 const vector:Vector.<Number> = new <Number> [ 10, 5 ];
-
-// populate that Vector with more elements
+// populate Vector
 for (var i:int = 1, j:int = 0; i <= 10; i++, j = ++j % 2)
 {
     vector.push(vector[j] * i);
 }
-
-trace("enumerating values...");
-
+// enumerate values
 for each (var val:Number in vector)
 {
     trace(val);
@@ -94,12 +90,10 @@ The tuple type, expressed as two or more types between brackets, as in `[Boolean
 The tuple type is useful for example when a function returns multiple values:
 
 ```
-function process(data:String):[Boolean, String]
+function process(data:String):[Boolean,String]
 {
-    trace("processing...");
-    var successful = true;
-    var output = data.charAt(0);
-    return [successful, output];
+    // code...
+    return [val1, val2];
 }
 ```
 
@@ -109,9 +103,14 @@ The `Function` type represents a function or a bound method that you may call in
 
 In addition, a compile time type over `Function` allows you to ensure a function takes a specific sequence of parameters and that it returns a specific type:
 
-```
+```as3
+// a function type taking a rest parameter
 type TakeRest = function(...[String]):void;
+
+// a function type taking an optional boolean
 type TakeOptBoolean = function(Boolean=):void;
+
+// a fnuction type taking a required integer
 type TakeInt = function(int):void;
 ```
 
@@ -134,20 +133,28 @@ The `whack.utils.Dictionary` type is a flexible mapping of arbitrary key-value p
 The `Dictionary` type is safe to use when it comes to solving name ambiguity:
 
 - Reading, writing or deleting a property from a `Dictionary` object will always access key-value pair data of the Dictionary.
-- Calling a property within a `Dictionary` object will call a method defined by the Dictionary class.
+- Calling a property within a `Dictionary` object will call a method defined by the `Dictionary` class.
 
 The following program demonstrates the effects of using `Dictionary`:
 
-```
+```as3
 import whack.utils.Dictionary;
 
 const dict = new Dictionary();
+
+// define a "x" key
 dict.x = 10;
+
+// print the number of key-value pairs
 trace(dict.length()); // 1
 
+// define a "length" key
 dict.length = 0;
-trace(dict.length()) // 2;
 
+// print the number of key-value pairs
+trace(dict.length()); // 2
+
+// print keys
 for (var k in dict)
 {
     trace(k);
@@ -155,6 +162,7 @@ for (var k in dict)
 // "x"
 // "length"
 
+// print values
 for each (var v in dict)
 {
     trace(v);
@@ -162,8 +170,12 @@ for each (var v in dict)
 // 10
 // 0
 
+// delete the "length" key
 delete dict.length;
 
+// define a Function key
 dict.m = function(a:Number):* (a * 10);
+
+// call it
 trace(dict.call("m", 10)); // 100
 ```

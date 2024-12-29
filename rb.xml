@@ -132,8 +132,8 @@
                     <path>using-configuration-constants.md</path>
                 </section>
                 <section>
-                    <title>Interoperating with JavaScript</title>
-                    <path>jsinterop.md</path>
+                    <title>Using JavaScript</title>
+                    <path>using-javascript.md</path>
                 </section>
             </sections>
         </reference>
