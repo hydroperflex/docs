@@ -1,4 +1,4 @@
-A Whack package may include an ASDoc configuration file (`asdoc.xml`) which links sections to be rendered during ASDoc compilation.
+A Whack package may include an ASDoc configuration file (`asdoc.xml`) which links sections and media files to be rendered during ASDoc compilation.
 
 # Example
 
