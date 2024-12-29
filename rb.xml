@@ -60,7 +60,7 @@
                             <path>using-mxml/mxml-reference.md</path>
                         </section>
                         <section>
-                            <title>Scripting the MXML application</title>
+                            <title>MXML cheatsheet</title>
                             <path>using-mxml/mxml-cheatsheet.md</path>
                         </section>
                     </sections>
@@ -75,7 +75,7 @@
                             <path>using-css/css-reference.md</path>
                         </section>
                         <section>
-                            <title>Scripting the MXML application</title>
+                            <title>CSS cheatsheet</title>
                             <path>using-css/css-cheatsheet.md</path>
                         </section>
                     </sections>
