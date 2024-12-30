@@ -5,11 +5,11 @@
     <!-- Optional description -->
     <description>Whack developer portal</description>
     <!-- Optional icon -->
-    <icon>favicon.png</icon>
+    <icon>icon-transparent.png</icon>
     <!-- Optional company logo generally 43x72 pixels (attached to the right below the top bar) -->
     <company-logo>company-logo.png</company-logo>
     <!-- Optional top bar colors -->
-    <top-bar-colors top="#000" bottom="#000"/>
+    <top-bar-colors top="#555" bottom="#111"/>
 
     <references>
         <reference>
@@ -18,9 +18,9 @@
             <!-- Optional description -->
             <description>Documentation of the Whack™ engine.</description>
             <!-- Optional icon -->
-            <icon>favicon.png</icon>
+            <icon>icon-transparent.png</icon>
             <!-- Optional top bar colors -->
-            <top-bar-colors top="#335" bottom="#113"/>
+            <top-bar-colors top="#555" bottom="#111"/>
 
             <sections>
                 <section>
@@ -110,7 +110,7 @@
             <!-- Optional description -->
             <description>Documentation for the ActionScript 3 language supported by the Whack™ engine.</description>
             <!-- Optional icon -->
-            <icon>favicon.png</icon>
+            <icon>icon-transparent.png</icon>
             <!-- Optional top bar colors -->
             <top-bar-colors top="#933" bottom="#311"/>
 
