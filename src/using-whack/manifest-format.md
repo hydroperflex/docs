@@ -13,7 +13,7 @@ version = "0.1.0"
 source-path = ["src"]
 
 [client-side]
-main-class = "example.Example"
+main-class = "com.example.Example"
 
 [dependencies]
 ```
@@ -210,6 +210,24 @@ exclude = ["/bar"]
 ```
 
 Note that the `whack.toml` file is always published, regardless of these options.
+
+# Client-side section
+
+The `[client-side]` table indicates that the project is designed for the client-side runtime. The `main-class` option indicates the main class instantiated on startup, which must be a `whack.core.Application` subclass (if it is a MXML component, the root tag is `<w:Application>` or a subtype).
+
+```toml
+[client-side]
+main-class = "com.example.Main"
+```
+
+# Server-side section
+
+The `[server-side]` table indicates that the project is designed for the server-side runtime. The `executable-name` option indicates the name for the command line tool compiled for the project.
+
+```toml
+[server-side]
+executable-name = "example-clt"
+```
 
 # Metadata
 
