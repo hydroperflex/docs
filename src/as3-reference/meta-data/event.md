@@ -13,4 +13,5 @@ Notes:
 
 * The ASDoc comment, the `@eventType` ASDoc tag and the `bubbles` entry are optional.
 * The `name` entry is the event type string.
-* The `@eventType` ASDoc tag links a static constant property equivalent to the event type.
+* The `type` entry refers to a class identifying the event object, such as `Event`.
+* The `@eventType` ASDoc tag refers to a static constant property equivalent to the event type.
