@@ -128,6 +128,10 @@
                     <path>types.md</path>
                 </section>
                 <section>
+                    <title>ASDoc comments</title>
+                    <path>asdoc.md</path>
+                </section>
+                <section>
                     <title>Meta-data</title>
                     <path>meta-data.md</path>
                     <sections>
