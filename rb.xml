@@ -128,6 +128,20 @@
                     <path>types.md</path>
                 </section>
                 <section>
+                    <title>Meta-data</title>
+                    <path>meta-data.md</path>
+                    <sections>
+                        <section>
+                            <title>Event</title>
+                            <path>meta-data/event.md</path>
+                        </section>
+                        <section>
+                            <title>Bindable</title>
+                            <path>meta-data/bindable.md</path>
+                        </section>
+                    </sections>
+                </section>
+                <section>
                     <title>Using configuration constants</title>
                     <path>using-configuration-constants.md</path>
                 </section>
