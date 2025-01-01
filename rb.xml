@@ -143,6 +143,10 @@
                             <title>Bindable</title>
                             <path>meta-data/bindable.md</path>
                         </section>
+                        <section>
+                            <title>RecordLike</title>
+                            <path>meta-data/recordlike.md</path>
+                        </section>
                     </sections>
                 </section>
                 <section>
