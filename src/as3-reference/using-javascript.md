@@ -5,7 +5,7 @@ Many of the functions mentioned in this section are not necessary as ActionScrip
 The following example accesses the global `Math` object:
 
 ```
-trace(js_bridge.lexical("Math").random());
+trace(JSBridge.lexical("Math").random());
 ```
 
 # Supported runtimes
