@@ -154,7 +154,7 @@
                     <path>using-configuration-constants.md</path>
                 </section>
                 <section>
-                    <title>Using JavaScript</title>
+                    <title>Using JavaScript bridge</title>
                     <path>using-javascript.md</path>
                 </section>
             </sections>

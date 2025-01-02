@@ -1,12 +1,21 @@
-ActionScript is converted into JavaScript code during compilation step in a hybrid manner. The target audience for this section are third party library developers.
+ActionScript is converted into JavaScript code during compilation step in a hybrid manner. The target audience for this section are third party library developers that reuse JavaScript libraries.
 
-Many of the functions mentioned in this section are not necessary as ActionScript can access JavaScript objects using its native operators, except for lexical references.
+ActionScript can access JavaScript objects using its native operators, except for lexical references, however certain methods of the `JSBridge` static class might be necessary.
 
 The following example accesses the global `Math` object:
 
 ```
 trace(JSBridge.lexical("Math").random());
 ```
+
+# JavaScript values
+
+There are certain points to be aware of:
+
+- Variables that hold a JavaScript value are of the `*` (wildcard) type.
+- The methods `JSBridge.newArray()` and `JSBridge.toJavascriptArray()` construct a JavaScript `Array` object.
+- The methods `JSBridge.newPlainObject()` and `JSBridge.toJavascriptPlainObject()` construct a JavaScript plain object (`Object`).
+- There are miscellaneous conversion methods defined by the `JSBridge` static class, such as `toJavascriptFunction()`.
 
 # Supported runtimes
 
