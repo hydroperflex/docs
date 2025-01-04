@@ -36,6 +36,10 @@
                     <path>manifest-format.md</path>
                 </section>
                 <section>
+                    <title>The Whack™ package registry</title>
+                    <path>package-registry.md</path>
+                </section>
+                <section>
                     <title>Building client-side applications</title>
                     <path>building-client-side-apps.md</path>
 
