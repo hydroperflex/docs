@@ -209,7 +209,7 @@ include = ["/foo"]
 exclude = ["/bar"]
 ```
 
-Note that the `whack.toml` file is always published, regardless of these options.
+Note that the `whack.toml` file is always published and `target` is always excluded, regardless of these options.
 
 # Client-side section
 
