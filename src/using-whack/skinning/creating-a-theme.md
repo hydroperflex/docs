@@ -5,6 +5,7 @@ package
 {
     import whack.core.*;
     import whack.themes.*;
+
     public class HelloWorldTheme extends Theme
     {
         override public function apply(app:Application):void
@@ -15,20 +16,43 @@ package
 }
 ```
 
-## Deriving
+## Deriving themes
 
-For deriving themes, call `anotherTheme.apply(app);` inside the `apply()` override.
+For deriving themes, it is recommended to call `themeObject.apply(app);` inside the `apply()` override, and **not to** extend the other theme class, as that allows executing the correct cascading style sheet for each theme.
 
 > Note that the `super.apply(app);` call executes any linked cascading style sheet; it is common to first derive any  desired themes and then finally call `super.apply(app);`.
 
+```as3
+package
+{
+    import whack.core.*;
+    import whack.themes.*;
+    import com.example.square.themes.SquareTheme;
+
+    public class HelloWorldTheme extends Theme
+    {
+        private const squareTheme:Theme = new SquareTheme();
+
+        override public function apply(app:Application):void
+        {
+            // Apply SquareTheme
+            squareTheme.apply(app);
+            // Apply cascading style sheet
+            super.apply(app);
+        }
+    }
+}
+```
+
 # Linking a cascading style sheet file
 
-A theme may link a cascading style sheet file for expressing the user interface skins in a concise way.
+A theme may link a cascading style sheet file for expressing the user interface skins in a concise way, internally overriding the `applyCSSRules()` method.
 
 ```as3
 package
 {
     import whack.themes.*;
+
     [StyleSheet(source="style.css")]
     public class HelloWorldTheme extends Theme
     {
