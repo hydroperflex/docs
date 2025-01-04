@@ -199,17 +199,9 @@ description = "Some description."
 
 # Including and excluding files
 
-The following mutually-exclusive fields contain [.gitignore-like](https://git-scm.com/docs/gitignore) entries used for indicating which files or directories shall be uploaded when publishing:
+Indicate which files or directories shall not be uploaded when publishing using a `.whackignore` file in any directories, which consists of [.gitignore-like](https://git-scm.com/docs/gitignore) entries.
 
-```toml
-[package]
-# Optional: choose this for including specific files or directories
-include = ["/foo"]
-# or choose this for excluding specific files or directories.
-exclude = ["/bar"]
-```
-
-Note that the `whack.toml` file is always published and `target` is always excluded, regardless of these options.
+Note that the `whack.toml` file is always published and the `target` directory is always excluded.
 
 # Client-side section
 
