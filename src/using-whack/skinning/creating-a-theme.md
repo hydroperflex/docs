@@ -3,12 +3,23 @@ A theme defines a cascading style sheet that may be applied to the Whack applica
 ```as3
 package
 {
+    import whack.core.*;
     import whack.themes.*;
     public class HelloWorldTheme extends Theme
     {
+        override public function apply(app:Application):void
+        {
+            super.apply(app);
+        }
     }
 }
 ```
+
+## Deriving
+
+For deriving themes, call `anotherTheme.apply(app);` inside the `apply()` override.
+
+> Note that the `super.apply(app);` call executes any linked cascading style sheet; it is common to first derive any  desired themes and then finally call `super.apply(app);`.
 
 # Linking a cascading style sheet file
 
