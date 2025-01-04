@@ -29,7 +29,7 @@ version = "0.1.0"
 source-path = ["src"]
 
 [server-side]
-executable-name = "example"
+command-name = "example"
 
 [dependencies]
 ```
@@ -222,11 +222,11 @@ main-class = "com.example.Main"
 
 # Server-side section
 
-The `[server-side]` table indicates that the project is designed for the server-side runtime. The `executable-name` option indicates the name for the command line tool compiled for the project.
+The `[server-side]` table indicates that the project is designed for the server-side runtime. The `command-name` option indicates the name for the command line tool compiled for the project.
 
 ```toml
 [server-side]
-executable-name = "example-clt"
+command-name = "example-clt"
 ```
 
 # Metadata
