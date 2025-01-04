@@ -37,6 +37,8 @@ trace("node:", RT::server ? "in node" : "not in node");
 
 The Whack manifest may specify multiple `[[javascript]]` sections linking a JavaScript file to be imported before the ActionScript environment.
 
+> Note that the JavaScript filename and import aliases must be very specific to prevent a name conflict.
+
 ```toml
 [[javascript]]
 path = "pixi.min.js"

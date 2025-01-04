@@ -242,7 +242,7 @@ bar = "qux"
 
 The Whack manifest may specify multiple `[[javascript]]` sections linking a JavaScript file to be loaded right before the ActionScript environment. The `import-declaration` field must provide highly specific aliases to prevent name conflict.
 
-> Note that the JavaScript filename must be very specific to prevent a name conflict.
+> Note that the JavaScript filename and import aliases must be very specific to prevent a name conflict.
 
 ```toml
 [[javascript]]
