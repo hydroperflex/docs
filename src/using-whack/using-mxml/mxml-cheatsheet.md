@@ -36,7 +36,7 @@ click="trace('click event:', event);"
     <p>Paragraph <b>number</b> <i>1</i></p>
     <ul>
         <li>Item a.</li>
-        <li>Item b. {password.text}</li>
+        <li>Item b.</li>
     </ul>
 </w:xhtml>
 ```
