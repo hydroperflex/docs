@@ -28,19 +28,6 @@ text="Last password: {password.text}"
 click="trace('click event:', event);"
 ```
 
-# Inserting XHTML
-
-```mxml
-<w:xhtml>
-    <h1>Title</h1>
-    <p>Paragraph <b>number</b> <i>1</i></p>
-    <ul>
-        <li>Item a.</li>
-        <li>Item b.</li>
-    </ul>
-</w:xhtml>
-```
-
 # Inserting Markdown
 
 ```mxml
