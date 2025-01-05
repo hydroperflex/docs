@@ -3,7 +3,7 @@ A theme defines a cascading style sheet that may be applied to the Whack applica
 ```as3
 package
 {
-    import whack.core.*;
+    import whack.components.*;
     import whack.themes.*;
 
     public class HelloWorldTheme extends Theme
@@ -18,14 +18,14 @@ package
 
 ## Deriving themes
 
-For deriving themes, it is recommended to call `themeObject.apply(app);` inside the `apply()` override, and **not to** extend the other theme class, as that allows executing the correct cascading style sheet for each theme.
+For deriving themes, it is recommended to call `themeObject.apply(app);` inside the `apply()` override, and **not to** extend the other theme class, as that allows executing the correct cascading style sheet for each theme (see below for linking cascading style sheets).
 
 > Note that the `super.apply(app);` call executes any linked cascading style sheet; it is common to first derive any  desired themes and then finally call `super.apply(app);`.
 
 ```as3
 package
 {
-    import whack.core.*;
+    import whack.components.*;
     import whack.themes.*;
     import com.example.square.themes.SquareTheme;
 
@@ -51,11 +51,16 @@ A theme may link a cascading style sheet file for expressing the user interface 
 ```as3
 package
 {
+    import whack.components.*;
     import whack.themes.*;
 
     [StyleSheet(source="style.css")]
     public class HelloWorldTheme extends Theme
     {
+        override public function apply(app:Application):void
+        {
+            super.apply(app);
+        }
     }
 }
 ```

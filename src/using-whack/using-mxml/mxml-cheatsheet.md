@@ -41,8 +41,23 @@ click="trace('click event:', event);"
 </w:xhtml>
 ```
 
-# Inserting HTML
+# Inserting Markdown
 
 ```mxml
-<w:html value="{html_source.value}"/>
+<w:markdown>
+    <![CDATA[
+        # Title
+
+        Paragraph **number** 1
+        
+        - Item a.
+        - Item b.
+    ]]>
+</w:markdown>
+```
+
+# Inserting HTML binding
+
+```mxml
+<w:html value="{source.value}"/>
 ```

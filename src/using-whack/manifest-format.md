@@ -205,7 +205,7 @@ Note that the `whack.toml` file is always published and the `target` directory i
 
 # Client-side section
 
-The `[client-side]` table indicates that the project is designed for the client-side runtime. The `main-class` option indicates the main class instantiated on startup, which must be a `whack.core.Application` subclass (if it is a MXML component, the root tag is `<w:Application>` or a subtype).
+The `[client-side]` table indicates that the project is designed for the client-side runtime. The `main-class` option indicates the main class instantiated on startup, which must be a `whack.components.Application` subclass (if it is a MXML component, the root tag is `<w:Application>` or a subtype).
 
 ```toml
 [client-side]

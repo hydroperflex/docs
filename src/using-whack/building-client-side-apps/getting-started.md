@@ -13,8 +13,7 @@ Here is an example entry point as an ActionScript component:
 ```actionscript
 package com.example
 {
-    import whack.core.*;
-    import whack.controls.*;
+    import whack.components.*;
 
     public class ExampleApplication extends Application
     {
