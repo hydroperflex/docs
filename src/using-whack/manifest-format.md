@@ -176,6 +176,13 @@ Specify authors of a package through the `package.authors` field, using the form
 authors = ["Example <email@example.com>"]
 ```
 
+# Specifying repository link
+
+```toml
+[package]
+repository = "https://github.com/example/swiss"
+```
+
 # Specifying keywords
 
 ```toml
