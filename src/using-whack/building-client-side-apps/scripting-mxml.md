@@ -1,7 +1,7 @@
 MXML files insert ActionScript code through a `<w:Script>` tag containing code inside a `<![CDATA[ ... ]]>` markup.
 
 ```mxml
-<!-- src/com/example/ExampleApplication.mxml -->
+<!-- src/com/example/MyApp.mxml -->
 <?xml version="1.0"?>
 <w:Application xmlns:w="http://ns.whack.net/2024">
     <w:Script><![CDATA[
