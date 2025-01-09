@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html data-root="../" data-reference="using-whack" data-section="using-whack/package-registry.html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Whack™ package registry</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/chrome.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar" style="background: linear-gradient(0deg, #111 0%, #555 100%)">
+            <img class="icon" src="icon-transparent.png" alt="Icon"><select id="color-mode-selector"><option value="system">System color</option><option value="light">Light</option><option value="dark">Dark</option></select><button class="button" id="toggleSidebar">Sidebar</button>
+        </div>
+    </header>
+    <main>
+        <div class="content-container">
+            <div class="content">
+                <!-- current section path + previous/next buttons + company logo -->
+                <div class="header-controls" style="display: flex; flex-direction: row; justify-content: space-between"><div style="display: flex; flex-direction: row; gap: 0.5rem; overflow-x: auto"><a href="../using-whack/index.html"><b>Home</b></a> <b>/</b> <a href="../using-whack/index.html"><b>Using Whack™ engine</b></a></div><div style="display: flex; flex-direction: row; gap: 1rem; align-items: end"><div class="prev-next-buttons"><a href="../using-whack/manifest-format.html"><button class="button">⯇</button></a><a href="../using-whack/building-client-side-apps.html"><button class="button">⯈</button></a></div><img class="company-logo" src="../company-logo.png"></div></div>
+
+                <h1 class="section-heading-title">The Whack™ package registry</h1><p>The Whack™ package registry is where published packages are hosted.</p>
+<h1 id="packages-as-optional-namespaces" tabindex="-1">Packages as optional namespaces</h1>
+<p>The dot separator used in package names has a semantic meaning of subpackage, except for the initial sequences:</p>
+<ul>
+<li><code>com.{name}</code></li>
+<li><code>net.{name}</code></li>
+<li><code>org.{name}</code></li>
+<li><code>me.{name}</code></li>
+</ul>
+<p>The following rules apply:</p>
+<ul>
+<li>Packages of the names <code>com</code>, <code>net</code>, <code>org</code> and <code>me</code> are not allowed.</li>
+<li>Publishing a subpackage of an existing package requires ownership over the existing package.</li>
+</ul>
+<p>For example, say <code>prisma</code> is a package; then <code>prisma.util</code> is a subpackage of <code>prisma</code>.</p>
+
+
+                <footer>
+                    <!-- current section path + previous/next buttons -->
+                    <div class="footer-controls" style="display: flex; flex-direction: row; justify-content: space-between"><div style="display: flex; flex-direction: row; gap: 0.5rem; overflow-x: auto"><a href="../using-whack/index.html"><b>Home</b></a> <b>/</b> <a href="../using-whack/index.html"><b>Using Whack™ engine</b></a></div><div style="display: flex; flex-direction: row; gap: 1rem;"><div class="prev-next-buttons"><a href="../using-whack/manifest-format.html"><button class="button">⯇</button></a><a href="../using-whack/building-client-side-apps.html"><button class="button">⯈</button></a></div><div class="company-logo"></div></div></div>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <script src="../toc.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
