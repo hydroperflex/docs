@@ -1,7 +1,7 @@
 Here is an example entry point as a MXML component:
 
 ```mxml
-<!-- src/com/example/ExampleApplication.mxml -->
+<!-- src/com/example/MyApp.mxml -->
 <?xml version="1.0"?>
 <w:Application xmlns:w="http://ns.whack.net/2024">
     <w:Label text="Hello, world!"/>
@@ -15,9 +15,9 @@ package com.example
 {
     import whack.components.*;
 
-    public class ExampleApplication extends Application
+    public class MyApp extends Application
     {
-        public function ExampleApplication()
+        public function MyApp()
         {
             super();
 
