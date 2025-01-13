@@ -126,36 +126,34 @@ The nullable type `T?` or `?T` is a compile time type enforcing that a type cont
 
 The non nullable type `T!` is a compile time ensuring that a type does not contain `null`.
 
-# Dictionary type
+# Map type
 
-The `whack.utils.Dictionary` type is a flexible mapping of arbitrary key-value pairs, where the user may access these pairs using common property operators.
+The `Map.<K, V>` type is a flexible mapping of arbitrary key-value pairs, where the user may access these pairs using common property operators.
 
-The `Dictionary` type is safe to use when it comes to solving name ambiguity:
+The `Map` type is safe to use when it comes to solving name ambiguity:
 
-- Reading, writing or deleting a property from a `Dictionary` object will always access key-value pair data of the Dictionary.
-- Calling a property within a `Dictionary` object will call a method defined by the `Dictionary` class.
+- Reading, writing or deleting a property from a `Map` object will always access key-value pair data of the Map.
+- Calling a property within a `Map` object will call a method defined by the `Map` class.
 
-The following program demonstrates the effects of using `Dictionary`:
+The following program demonstrates the effects of using `Map`:
 
 ```as3
-import whack.utils.Dictionary;
-
-const dict = new Dictionary();
+const myMap = new Map.<*, *>();
 
 // define a "x" key
-dict.x = 10;
+myMap.x = 10;
 
 // print the number of key-value pairs
-trace(dict.length()); // 1
+trace(myMap.length()); // 1
 
 // define a "length" key
-dict.length = 0;
+myMap.length = 0;
 
 // print the number of key-value pairs
-trace(dict.length()); // 2
+trace(myMap.length()); // 2
 
 // print keys
-for (var k in dict)
+for (var k in myMap)
 {
     trace(k);
 }
@@ -163,7 +161,7 @@ for (var k in dict)
 // "length"
 
 // print values
-for each (var v in dict)
+for each (var v in myMap)
 {
     trace(v);
 }
@@ -171,11 +169,11 @@ for each (var v in dict)
 // 0
 
 // delete the "length" key
-delete dict.length;
+delete myMap.length;
 
 // define a Function key
-dict.m = function(a:Number):* (a * 10);
+myMap.m = function(a:Number):* (a * 10);
 
 // call it
-trace(dict.call("m", 10)); // 100
+trace(myMap.call("m", 10)); // 100
 ```
