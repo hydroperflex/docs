@@ -161,6 +161,10 @@
                     <title>Using JavaScript bridge</title>
                     <path>using-javascript.md</path>
                 </section>
+                <section>
+                    <title>Parameterized types</title>
+                    <path>parameterized-types.md</path>
+                </section>
             </sections>
         </reference>
     </references>
