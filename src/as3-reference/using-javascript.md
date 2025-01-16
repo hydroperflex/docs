@@ -46,3 +46,25 @@ import-declaration = 'import * as PIXI from "pixi.js";'
 # client-side = true
 # server-side = true
 ```
+
+# Defining conversion methods
+
+The convention for the conversion methods of a specific class is to use the `jsbridge_from` and `jsbridge_to` namespaces to avoid cluttering the `public` namespace.
+
+```as3
+package
+{
+    public class C1
+    {
+        jsbridge_from static function object(arg:*):C1
+        {
+            // code
+        }
+
+        jsbridge_to function object():*
+        {
+            // code
+        }
+    }
+}
+```

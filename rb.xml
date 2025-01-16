@@ -116,7 +116,7 @@
             <!-- Optional icon -->
             <icon>icon-transparent.png</icon>
             <!-- Optional top bar colors -->
-            <top-bar-colors top="#933" bottom="#311"/>
+            <top-bar-colors top="#555" bottom="#111"/>
 
             <sections>
                 <section>
@@ -124,7 +124,7 @@
                     <path>intro.md</path>
                 </section>
                 <section>
-                    <title>ActionScript 3 cheatsheet</title>
+                    <title>Cheatsheet</title>
                     <path>as3-cheatsheet.md</path>
                 </section>
                 <section>
@@ -158,16 +158,16 @@
                     <path>using-configuration-constants.md</path>
                 </section>
                 <section>
-                    <title>Using JavaScript bridge</title>
-                    <path>using-javascript.md</path>
-                </section>
-                <section>
-                    <title>Parameterized types</title>
+                    <title>Using parameterized types</title>
                     <path>parameterized-types.md</path>
                 </section>
                 <section>
-                    <title>Serialization</title>
-                    <path>serialization.md</path>
+                    <title>Serializing data</title>
+                    <path>serializing-data.md</path>
+                </section>
+                <section>
+                    <title>Using JavaScript bridge</title>
+                    <path>using-javascript.md</path>
                 </section>
             </sections>
         </reference>
