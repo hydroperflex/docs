@@ -16,6 +16,8 @@ The `[Serialization]` meta-data may be required in your classes to guide the (de
 
 For implementing custom data formats, consult static methods of the `Reflect` namespace and use the methods `isArray()`, `isVector()` and `isMap()` for detection of certain types instead of using `is Array.<*>` for instance.
 
+If the data format is JSON-compatible (like TOML), you may consider instead just using `JSON.stringify()`, `JSON.parse()` and `JSON.parseAs()` in conjunction with a basic (de)serializer of plain objects.
+
 ## Tagged types
 
 Use the `[Serialization]` tag as followss to guide the (de)serializer:
