@@ -165,6 +165,10 @@
                     <title>Parameterized types</title>
                     <path>parameterized-types.md</path>
                 </section>
+                <section>
+                    <title>Serialization</title>
+                    <path>serialization.md</path>
+                </section>
             </sections>
         </reference>
     </references>
