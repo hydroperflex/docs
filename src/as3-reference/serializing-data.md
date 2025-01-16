@@ -8,15 +8,15 @@ Whack allows easily serializing and deserializing classes.
 
 ## JSON
 
-JSON data can be serialized with `JSON.stringify(val)`, and for deserializing into a specific class you may use `JSON.parseAs(str, T)`.
+JSON data can be serialized with `JSON.stringify(val)`, and for deserializing into a specific class you may use `JSON.parse(str, T)`.
 
-The `[Serialization]` meta-data may be required in your classes to guide the (de)serializer.
+The `[Serialization]` meta-data described below may be required in your classes to guide the (de)serializer.
 
 ## Additional data formats
 
 For implementing custom data formats, consult static methods of the `Reflect` namespace and use the methods `isArray()`, `isVector()` and `isMap()` for detection of certain types instead of using `is Array.<*>` for instance.
 
-If the data format is JSON-compatible (like TOML), you may consider instead just using `JSON.stringify()`, `JSON.parse()` and `JSON.parseAs()` in conjunction with a basic (de)serializer of plain objects.
+If the data format is JSON-compatible (like TOML), you may consider instead just using `JSON.stringify()` and `JSON.parse()` in conjunction with a basic (de)serializer of plain objects.
 
 ## Tagged types
 
