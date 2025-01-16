@@ -94,27 +94,24 @@ package demo
 
 Supported union variants include `string="true"`, `number="true"`, `object="true"`, `array="true"` and `boolean="true"`, where all but `object="true"` require the `field="propertyName"` option. The `array="true"` option works with `Array` and `Vector` field types.
 
-## Classes as formatted strings
+## Customized (de)serialization
 
-Here is an example on formatting classes into a string:
+The following is a code snippet defining custom JSON (de)serialization methods:
 
 ```as3
 package
 {
-    // "1:10-10:1"
-    [Serialization(format="{firstLine}:{firstColumn}-{lastLine}:{lastColumn}")]
     public class Location
     {
-        public var firstLine:int;
-        public var firstColumn:int;
-        public var lastLine:int;
-        public var lastColumn:int;
+        serialization_capabilities static function fromJSON(value:*):Location
+        {
+            // code
+        }
 
-        // code
+        serialization_capabilities function toJSON():*
+        {
+            // code
+        }
     }
 }
 ```
-
-> Note that the `format` option may also refer to virtual accessors, and not only fixed variables, in which case, for deserialization it is required that the properties are writable.
-
-> Note that the `format` option may not work as intended for decimal or negative numbers depending on the expected punctuation.
