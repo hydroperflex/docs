@@ -103,12 +103,12 @@ package
 {
     public class Location
     {
-        serialization_capabilities static function fromJSON(value:*):Location
+        public static function fromJSON(value:*):Location
         {
             // code
         }
 
-        serialization_capabilities function toJSON():*
+        public function toJSON():*
         {
             // code
         }
