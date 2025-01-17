@@ -177,3 +177,12 @@ myMap.m = function(a:Number):* (a * 10);
 // call it
 trace(myMap.call("m", 10)); // 100
 ```
+
+In addition, `Map.<K, V>` can be initialized using an object initialiser:
+
+```as3
+const m:Map.<String, float> = {
+    a: 10f,
+    b: 10f,
+};
+```

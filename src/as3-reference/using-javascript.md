@@ -12,10 +12,14 @@ trace(JSBridge.lexical("Math").random());
 
 There are certain points to be aware of:
 
-- Variables that hold a JavaScript value are of the `*` (wildcard) type.
+- Variables that hold a JavaScript value are of the `*` (wildcard) type, or you may use the special `JSVal` type annotation for more efficiency.
 - The methods `JSBridge.newArray()` and `JSBridge.toJSArray()` construct a JavaScript `Array` object.
 - The methods `JSBridge.newPlainObject()` and `JSBridge.toJSPlainObject()` construct a JavaScript plain object (`Object`).
 - There are miscellaneous conversion methods defined by the `JSBridge` static class, such as `toJSFunction()`.
+
+# The JSVal type
+
+Using `JSVal` as a type annotation leads to more efficient ActionScript operators when using a JavaScript value from ActionScript 3. For instance, computing a property will not generate an ActionCore `getproperty(...)` operation, but rather a `obj[k]` operator.
 
 # Supported runtimes
 
