@@ -162,6 +162,10 @@
                     <path>parameterized-types.md</path>
                 </section>
                 <section>
+                    <title>Cloning data</title>
+                    <path>cloning-data.md</path>
+                </section>
+                <section>
                     <title>Serializing data</title>
                     <path>serializing-data.md</path>
                 </section>
