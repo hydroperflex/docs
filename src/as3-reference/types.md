@@ -97,6 +97,8 @@ function process(data:String):[Boolean,String]
 }
 ```
 
+The tuple type, when typed as `*` or `Object`, defines the `length` property and may be iterated normally.
+
 # Function type
 
 The `Function` type represents a function or a bound method that you may call in ActionScript.
