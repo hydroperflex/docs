@@ -124,19 +124,19 @@
                     <path>intro.md</path>
                 </section>
                 <section>
-                    <title>Cheatsheet</title>
+                    <title>Language cheatsheet</title>
                     <path>as3-cheatsheet.md</path>
                 </section>
                 <section>
-                    <title>Types</title>
+                    <title>ActionScript types</title>
                     <path>types.md</path>
                 </section>
                 <section>
-                    <title>ASDoc comments</title>
+                    <title>Using ASDoc comments</title>
                     <path>asdoc.md</path>
                 </section>
                 <section>
-                    <title>Meta-data</title>
+                    <title>Using meta-data</title>
                     <path>meta-data.md</path>
                     <sections>
                         <section>
@@ -154,12 +154,12 @@
                     </sections>
                 </section>
                 <section>
-                    <title>Using configuration constants</title>
-                    <path>using-configuration-constants.md</path>
+                    <title>Type conversion</title>
+                    <path>type-conversion.md</path>
                 </section>
                 <section>
-                    <title>Using parameterized types</title>
-                    <path>parameterized-types.md</path>
+                    <title>Using configuration constants</title>
+                    <path>using-configuration-constants.md</path>
                 </section>
                 <section>
                     <title>Cloning data</title>
@@ -168,6 +168,10 @@
                 <section>
                     <title>Serializing data</title>
                     <path>serializing-data.md</path>
+                </section>
+                <section>
+                    <title>Using parameterized types</title>
+                    <path>parameterized-types.md</path>
                 </section>
                 <section>
                     <title>Using JavaScript bridge</title>
