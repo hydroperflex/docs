@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html data-root="../" data-reference="as3-reference" data-section="as3-reference/serializing-data.html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serializing data</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/chrome.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar" style="background: linear-gradient(0deg, #111 0%, #555 100%)">
+            <img class="icon" src="icon-transparent.png" alt="Icon"><select id="color-mode-selector"><option value="system">System color</option><option value="light">Light</option><option value="dark">Dark</option></select><button class="button" id="toggleSidebar">Sidebar</button>
+        </div>
+    </header>
+    <main>
+        <div class="content-container">
+            <div class="content">
+                <!-- current section path + previous/next buttons + company logo -->
+                <div class="header-controls" style="display: flex; flex-direction: row; justify-content: space-between"><div style="display: flex; flex-direction: row; gap: 0.5rem; overflow-x: auto"><a href="../as3-reference/index.html"><b>Home</b></a> <b>/</b> <a href="../as3-reference/index.html"><b>ActionScript 3 reference</b></a></div><div style="display: flex; flex-direction: row; gap: 1rem; align-items: end"><div class="prev-next-buttons"><a href="../as3-reference/cloning-data.html"><button class="button">⯇</button></a><a href="../as3-reference/parameterized-types.html"><button class="button">⯈</button></a></div><img class="company-logo" src="../company-logo.png"></div></div>
+
+                <h1 class="section-heading-title">Serializing data</h1><p>Whack allows easily serializing and deserializing classes.</p>
+<blockquote>
+<p>Note that parameterized types may not work as intended in the serialization patterns, except for <code>Array.&lt;T&gt;</code>, <code>Vector.&lt;T&gt;</code> and <code>Map.&lt;K, V&gt;</code>.</p>
+</blockquote>
+<blockquote>
+<p>Note that using nullable or non-nullable types may not work as intended in the serialization patterns.</p>
+</blockquote>
+<blockquote>
+<p>Note that variables should not hold functions in the serialization patterns.</p>
+</blockquote>
+<h2 id="json" tabindex="-1">JSON</h2>
+<p>JSON data can be serialized with <code>JSON.stringify(val)</code>, and for deserializing into a specific class you may use <code>JSON.parse(str, T)</code>.</p>
+<p>The <code>[Serialization]</code> meta-data described below may be required in your classes to guide the (de)serializer.</p>
+<h2 id="additional-data-formats" tabindex="-1">Additional data formats</h2>
+<p>For implementing custom data formats, consult static methods of the <code>Reflect</code> namespace and use the methods <code>isArray()</code>, <code>isVector()</code> and <code>isMap()</code> for detection of certain types instead of using <code>is Array.&lt;*&gt;</code> for instance.</p>
+<p>If the data format is JSON-compatible (like TOML), you may consider instead just using <code>JSON.stringify()</code> and <code>JSON.parse()</code> in conjunction with a basic (de)serializer of plain objects.</p>
+<h2 id="tagged-types" tabindex="-1">Tagged types</h2>
+<p>Use the <code>[Serialization]</code> tag as followss to guide the (de)serializer:</p>
+<ul>
+<li>The <code>tag=&quot;&quot;</code> option indicates the property name used for the type (such as <code>&quot;type&quot;</code> as in the object <code>{ &quot;type&quot;: &quot;bear&quot;, &quot;anger&quot;: 100 }</code>).</li>
+<li>The <code>rename=&quot;&quot;</code> option is optional and indicates the serialized form of the type kind (such as <code>&quot;bear&quot;</code>). If it is ommited, it defaults to the local name of the class (such as <code>&quot;Bear&quot;</code>).</li>
+</ul>
+<pre><code class="language-as3">package demo
+{
+    [Serialization(tag=&quot;type&quot;)]
+    public class Animal
+    {
+    }
+
+    [Serialization(tag=&quot;type&quot;)]
+    public class Mammal extends Animal
+    {
+    }
+
+    [Serialization(rename=&quot;bear&quot;)]
+    public class Bear extends Mammal
+    {
+        public var anger:Number;
+    }
+}
+</code></pre>
+<h2 id="ignoring-fields" tabindex="-1">Ignoring fields</h2>
+<p>Ignore fields through the following <code>Serialization</code> meta-data:</p>
+<pre><code class="language-as3">[Serialization(skip=&quot;true&quot;)]
+public var x:T;
+</code></pre>
+<h2 id="renaming-fields" tabindex="-1">Renaming fields</h2>
+<p>Rename variables through the following <code>Serialization</code> meta-data indicating their serialized name:</p>
+<pre><code class="language-as3">[Serialization(rename=&quot;aa-bb&quot;)]
+public var aaBB:String;
+</code></pre>
+<h2 id="unions" tabindex="-1">Unions</h2>
+<p>Union-like classes are extended for representing different data types. Here is an example:</p>
+<pre><code class="language-as3">package demo
+{
+    // &quot;1.0.0&quot;
+    // { &quot;version&quot;: &quot;1.0.0&quot; }
+    [Serialization(union=&quot;true&quot;)]
+    public class Dependency
+    {
+    }
+
+    [Serialization(string=&quot;true&quot;, field=&quot;value&quot;)]
+    public class VersionDependency extends Dependency
+    {
+        public var value:String;
+    }
+
+    [Serialization(object=&quot;true&quot;)]
+    public class AdvancedDependency extends Dependency
+    {
+        public var version:String;
+    }
+}
+</code></pre>
+<p>Supported union variants include <code>string=&quot;true&quot;</code>, <code>number=&quot;true&quot;</code>, <code>object=&quot;true&quot;</code>, <code>array=&quot;true&quot;</code> and <code>boolean=&quot;true&quot;</code>, where all but <code>object=&quot;true&quot;</code> require the <code>field=&quot;propertyName&quot;</code> option. The <code>array=&quot;true&quot;</code> option works with <code>Array</code> and <code>Vector</code> field types.</p>
+<h2 id="customized-(de)serialization" tabindex="-1">Customized (de)serialization</h2>
+<p>The following is a code snippet defining custom JSON (de)serialization methods:</p>
+<pre><code class="language-as3">package
+{
+    public class Location
+    {
+        public static function fromJSON(value:*):Location
+        {
+            // code
+        }
+
+        public function toJSON():*
+        {
+            // code
+        }
+    }
+}
+</code></pre>
+
+
+                <footer>
+                    <!-- current section path + previous/next buttons -->
+                    <div class="footer-controls" style="display: flex; flex-direction: row; justify-content: space-between"><div style="display: flex; flex-direction: row; gap: 0.5rem; overflow-x: auto"><a href="../as3-reference/index.html"><b>Home</b></a> <b>/</b> <a href="../as3-reference/index.html"><b>ActionScript 3 reference</b></a></div><div style="display: flex; flex-direction: row; gap: 1rem;"><div class="prev-next-buttons"><a href="../as3-reference/cloning-data.html"><button class="button">⯇</button></a><a href="../as3-reference/parameterized-types.html"><button class="button">⯈</button></a></div><div class="company-logo"></div></div></div>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <script src="../toc.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

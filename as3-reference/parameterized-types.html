@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html data-root="../" data-reference="as3-reference" data-section="as3-reference/parameterized-types.html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using parameterized types</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/chrome.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar" style="background: linear-gradient(0deg, #111 0%, #555 100%)">
+            <img class="icon" src="icon-transparent.png" alt="Icon"><select id="color-mode-selector"><option value="system">System color</option><option value="light">Light</option><option value="dark">Dark</option></select><button class="button" id="toggleSidebar">Sidebar</button>
+        </div>
+    </header>
+    <main>
+        <div class="content-container">
+            <div class="content">
+                <!-- current section path + previous/next buttons + company logo -->
+                <div class="header-controls" style="display: flex; flex-direction: row; justify-content: space-between"><div style="display: flex; flex-direction: row; gap: 0.5rem; overflow-x: auto"><a href="../as3-reference/index.html"><b>Home</b></a> <b>/</b> <a href="../as3-reference/index.html"><b>ActionScript 3 reference</b></a></div><div style="display: flex; flex-direction: row; gap: 1rem; align-items: end"><div class="prev-next-buttons"><a href="../as3-reference/serializing-data.html"><button class="button">⯇</button></a><a href="../as3-reference/using-javascript.html"><button class="button">⯈</button></a></div><img class="company-logo" src="../company-logo.png"></div></div>
+
+                <h1 class="section-heading-title">Using parameterized types</h1><p>Parameterized types exist in two ways:</p>
+<ul>
+<li>Built-ins: <code>Vector.&lt;T&gt;</code>, <code>Array.&lt;T&gt;</code> and <code>Map.&lt;K, V&gt;</code></li>
+<li>Erasure: any other parameterized type</li>
+</ul>
+<p>The erasure way means that the type parameters are erased at runtime, and wherever they appear they are replaced by the <code>*</code> type; therefore, defining your own parameterized types is not recommended as it may lead to source of confusion, since using type parameters in built-ins will lead to using <code>*</code> as argument, as the following program does:</p>
+<pre><code class="language-as3">package
+{
+    public class C1.&lt;T&gt;
+    {
+        public var x:[T];
+    }
+}
+</code></pre>
+<p>Even though at compile time the type <code>T</code> is replaced by the respective argument, at runtime the above is equivalent to:</p>
+<pre><code class="language-as3">package
+{
+    public class C1
+    {
+        public var x:[*];
+    }
+}
+</code></pre>
+<p>Therefore, the basic recommended parameterized types are <code>Array.&lt;T&gt;</code> (or <code>[T]</code>), <code>Vector.&lt;T&gt;</code>, <code>Map.&lt;K, V&gt;</code>, and <code>Promise.&lt;T&gt;</code>.</p>
+
+
+                <footer>
+                    <!-- current section path + previous/next buttons -->
+                    <div class="footer-controls" style="display: flex; flex-direction: row; justify-content: space-between"><div style="display: flex; flex-direction: row; gap: 0.5rem; overflow-x: auto"><a href="../as3-reference/index.html"><b>Home</b></a> <b>/</b> <a href="../as3-reference/index.html"><b>ActionScript 3 reference</b></a></div><div style="display: flex; flex-direction: row; gap: 1rem;"><div class="prev-next-buttons"><a href="../as3-reference/serializing-data.html"><button class="button">⯇</button></a><a href="../as3-reference/using-javascript.html"><button class="button">⯈</button></a></div><div class="company-logo"></div></div></div>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <script src="../toc.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
