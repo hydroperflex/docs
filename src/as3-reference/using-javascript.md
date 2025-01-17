@@ -13,9 +13,9 @@ trace(JSBridge.lexical("Math").random());
 There are certain points to be aware of:
 
 - Variables that hold a JavaScript value are of the `*` (wildcard) type.
-- The methods `JSBridge.newArray()` and `JSBridge.toJavascriptArray()` construct a JavaScript `Array` object.
-- The methods `JSBridge.newPlainObject()` and `JSBridge.toJavascriptPlainObject()` construct a JavaScript plain object (`Object`).
-- There are miscellaneous conversion methods defined by the `JSBridge` static class, such as `toJavascriptFunction()`.
+- The methods `JSBridge.newArray()` and `JSBridge.toJSArray()` construct a JavaScript `Array` object.
+- The methods `JSBridge.newPlainObject()` and `JSBridge.toJSPlainObject()` construct a JavaScript plain object (`Object`).
+- There are miscellaneous conversion methods defined by the `JSBridge` static class, such as `toJSFunction()`.
 
 # Supported runtimes
 
